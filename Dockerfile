@@ -42,4 +42,4 @@ RUN pip3 install -r requirements.txt
 
 EXPOSE 5001
 
-ENTRYPOINT [ "python" "edge-inference/CNN/edge_inference_request_server.py" ]
+ENTRYPOINT [ "python", "edge-inference/CNN/edge_inference_request_server.py" ]
