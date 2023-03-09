@@ -27,7 +27,7 @@ RUN apt-get install -y gasket-dkms \
     usbutils
 RUN apt-get install -y python3-edgetpu
 
-RUN pip3 install https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp36-cp36m-linux_aarch64.whl
+# RUN pip3 install https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-cp36-cp36m-linux_aarch64.whl
 
 # model, dataset, inference code git repo clone
 RUN git clone https://github.com/ddps-lab/edge-inference.git

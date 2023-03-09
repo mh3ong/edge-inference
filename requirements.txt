@@ -1,5 +1,9 @@
 # pip3 install -r requirements.txt
 
+# tflite runtime
+tflite-runtime>=2.11.0
+Flask>=2.2.3
+
 # CNN ----------------------------------------
 Pillow>=7.1.2
 scikit-build>=0.14.1
@@ -24,3 +28,5 @@ transformers==4.18.0
 datasets==2.1.0
 bert-for-tf2==0.14.9
 tensorflow_hub
+
+
