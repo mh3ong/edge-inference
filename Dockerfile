@@ -32,5 +32,13 @@ RUN pip3 install https://dl.google.com/coral/python/tflite_runtime-2.1.0.post1-c
 # model, dataset, inference code git repo clone
 RUN git clone https://github.com/ddps-lab/edge-inference.git
 
+RUN git checkout -t origin/cnn
+
+RUN git pull
+
 COPY ./requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
+
+EXPOSE 5001
+
+ENTRYPOINT [ "python" "edge-inference/CNN/edge_inference_request_server.py" ]
