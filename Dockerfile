@@ -1,5 +1,5 @@
 #FROM nvcr.io/nvidia/l4t-tensorflow:r32.6.1-tf2.5-py3 
-FROM tensorflow/tensorflow:2.5.0
+FROM tensorflow/tensorflow:2.11.0
 
 ## CNN, NLP library install 
 RUN apt-get update && apt-get install -y git \
