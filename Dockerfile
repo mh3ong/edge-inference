@@ -49,4 +49,4 @@ RUN cd dataset/ && ./dataset_download.sh
 
 EXPOSE 5001
 
-ENTRYPOINT [ "python", "edge-inference/CNN/edge_inference_request_server.py" ]
+ENTRYPOINT [ "python", "edge_inference_request_server.py" ]
