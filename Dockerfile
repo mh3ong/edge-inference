@@ -47,6 +47,10 @@ RUN chmod +x dataset/dataset_download.sh
 
 RUN cd dataset/ && ./dataset_download.sh
 
+RUN chmod +x model/model_download.sh
+
+RUN cd model/ &&./model_download.sh
+
 EXPOSE 5001
 
 ENTRYPOINT [ "python", "edge_inference_request_server.py" ]
