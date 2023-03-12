@@ -51,6 +51,8 @@ RUN chmod +x model/model_download.sh
 
 RUN cd model/ &&./model_download.sh
 
+RUN while curl -s http://localhost:5001/ > /dev/null; do sleep 1; python edge_inference_request_server.py ; done
+
 EXPOSE 5001
 
 ENTRYPOINT [ "python", "edge_inference_request_server.py" ]
