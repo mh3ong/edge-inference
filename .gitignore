@@ -1,0 +1,8 @@
+/CNN/dataset/coco_2017
+/CNN/dataset/imagenet
+/CNN/dataset/video
+/CNN/model/mobilenet_v1*
+/CNN/model/mobilenet_v2*
+/CNN/model/inception_v3*
+/CNN/model/yolo*
+/CNN/model/classify.py
