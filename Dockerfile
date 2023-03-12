@@ -53,7 +53,7 @@ RUN cd model/ &&./model_download.sh
 
 RUN python edge_inference_request_server.py &
 
-RUN ! curl -s --heal --request GET "http://localhost:5001/healthcheck" | grep "200 OK" > /dev/null; do sleep 1; echo "testing..."; done;
+RUN while ! curl -s --heal --request GET "http://localhost:5001/healthcheck" | grep "200 OK" > /dev/null; do sleep 1; echo "testing..."; done;
 
 RUN pkill python
 
