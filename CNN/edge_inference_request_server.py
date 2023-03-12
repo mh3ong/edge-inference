@@ -144,5 +144,9 @@ def inceptionv3():
 
     return f'inceptionv3 inference success\ninference time:{inference_time}\n'
 
+@app.route('/healthceck')
+def healthcheck():
+    return "healthcheck page"
+
 
 app.run(host=hostname, port=port, threaded=False)
