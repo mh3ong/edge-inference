@@ -51,9 +51,7 @@ RUN chmod +x model/model_download.sh
 
 RUN cd model/ &&./model_download.sh
 
-RUN python edge_inference_request_server.py &
-
-RUN while ! curl -s --head --request GET "http://localhost:5001/healthcheck" | grep "200 OK" > /dev/null; do sleep 1; echo "testing..."; done;
+RUN python edge_inference_request_server.py & ; while ! curl -s --head --request GET "http://localhost:5001/healthcheck" | grep "200 OK" > /dev/null; do sleep 1; echo "testing..."; done;
 
 RUN pkill python
 
