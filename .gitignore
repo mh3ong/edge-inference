@@ -6,3 +6,4 @@
 /CNN/model/inception_v3*
 /CNN/model/yolo*
 /CNN/model/classify.py
+*.DS_store*
